@@ -19,14 +19,13 @@ int main() {
    //HOW DO I ADD d AFTER b (linke b->d)
 
   
-
+/*
    cout<<"Value of a is "<<a.value<<endl;
-   cout<<"Value of b is "<<b.value<<endl;
    cout<<"Value of *head is "<<(*head).value<<endl;
    cout<<"Value of *head is "<<head->value<<endl;
 // 
 
-
+  cout<<"Value of b is "<<b.value<<endl;
    cout<<"Value of b is "<<a.next -> value <<endl;
    cout<<"Value of b is "<< (*a.next).value <<endl;
 
@@ -41,6 +40,14 @@ int main() {
      cout<<"Value of d is "<< b.next->value <<endl;
      
     cout<<"Value of d is "<< a.next->next->value <<endl;
-   cout<<"Value of d is "<< henext->next->value <<endl;
+   cout<<"Value of d is "<< head->next->next->value <<endl;
+*/
+   struct node *temp =head;
+    int i;
+
+   for( i=0;i<3;i++){
+       cout<<temp->value<<endl;
+       temp=temp->next;
+   }
    
 } 

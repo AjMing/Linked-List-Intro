@@ -3,18 +3,31 @@ using namespace std;
 #include "node.h"
 
 int main() {
-  int c=5;
-   struct node a,b,*head ,d ;
-  
 
-  head=&a; 
-  a.next=&b;
-  b.next= &d;
+  typedef struct node NODE;
+  typedef NODE* NodePtr;
+
+  int c=5,i;
+    
+  NodePtr head,temp; 
+   // NODE * head;
+  
+  head= new NODE; //a 
+  temp=head;
+  // head=&a; 
+ for(i=0;i<3;i++){// Create 3 additional nodes
+  /*head->next=new NODE; //b
+  head->next->next= new NODE;
+  head->next->next->next=NULL;
+  head->value = c;
+   head->next->value = (*head).value+3;
+   head->next->next->value=7;*/
+   
+   temp->value=c+i;
+ }
   
 //  b.value=head->value+3; 
-   a.value = c;
-   b.value = (*head).value+3;
-   d.value=7;
+   
 
    //HOW DO I ADD d AFTER b (linke b->d)
 
@@ -42,12 +55,20 @@ int main() {
     cout<<"Value of d is "<< a.next->next->value <<endl;
    cout<<"Value of d is "<< head->next->next->value <<endl;
 */
-   struct node *temp =head;
-    int i;
+  temp =head;
+
 
    for( i=0;i<3;i++){
        cout<<temp->value<<endl;
        temp=temp->next;
    }
    
+
+ 
+
+
+
+
+
+
 } 

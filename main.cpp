@@ -2,7 +2,7 @@
 using namespace std;
 #include "node.h"
 
-int main() {
+int main(int argc, char ** argv) {
 
   typedef struct node NODE;
   typedef NODE* NodePtr;
@@ -36,6 +36,12 @@ int main() {
 
     for(temp=head; temp!=NULL; temp=temp->next ){
        cout<<temp->value<<endl;
+    }
+
+    for(temp=head; temp!=NULL; temp=head ){
+        head=temp->next;
+        cout<<"Deleting "<<temp->value <<endl;
+        delete temp;
     }
   
 //  b.value=head->value+3; 

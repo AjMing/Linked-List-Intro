@@ -15,16 +15,28 @@ int main() {
   head= new NODE; //a 
   temp=head;
   // head=&a; 
- for(i=0;i<3;i++){// Create 3 additional nodes
-  /*head->next=new NODE; //b
+
+  
+  /*
+  head->next=new NODE; //b
   head->next->next= new NODE;
   head->next->next->next=NULL;
   head->value = c;
    head->next->value = (*head).value+3;
    head->next->next->value=7;*/
-   
+
+
+ for(i=0;i<3;i++){// Create 3 additional nodes
    temp->value=c+i;
+   temp->next=new NODE; //b
+   temp=temp->next;
  }
+   temp->value=c+i;
+   temp->next=NULL; //b
+
+    for(temp=head; temp!=NULL; temp=temp->next ){
+       cout<<temp->value<<endl;
+    }
   
 //  b.value=head->value+3; 
    
@@ -55,13 +67,11 @@ int main() {
     cout<<"Value of d is "<< a.next->next->value <<endl;
    cout<<"Value of d is "<< head->next->next->value <<endl;
 */
-  temp =head;
 
 
-   for( i=0;i<3;i++){
+   for(temp=head; temp!=NULL; temp=temp->next ){
        cout<<temp->value<<endl;
-       temp=temp->next;
-   }
+    }
    
 
  
